@@ -33,8 +33,9 @@ const overrides = {
     "2xl": "24px",
     "3xl": "28px",
     "4xl": "36px",
-    "5xl": "48px",
-    "6xl": "64px",
+    "5xl": "40px",
+    "6xl": "48",
+    "7xl": "64px",
   },
 };
 
