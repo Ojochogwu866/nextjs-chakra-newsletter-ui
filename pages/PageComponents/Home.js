@@ -8,9 +8,11 @@ import {
   FormLabel,
   Input,
   Button,
+  Icon,
   useColorMode,
   FormHelperText,
 } from "@chakra-ui/react";
+import { InfoIcon } from "@chakra-ui/icons";
 
 const Container = ({ children }) => {
   return (
@@ -30,10 +32,18 @@ const Container = ({ children }) => {
           justifyContent="center"
         >
           <Box mt={100} textAlign="center" width="auto">
-            <Text fontSize={16}>
+            <Text fontSize={16} fontWeight={500}>
               Grow from Junior to Advanced Software Engineer
             </Text>
-            <Text bg="teal.100" fontSize={18}>
+
+            <Text
+              display="flex"
+              alignItems="center"
+              bg="gray.100"
+              fontSize={16}
+              p={5}
+            >
+              <InfoIcon />
               Join 10k+ growth focused software engineers and receive exclusive,
               actionable steps that will propel your career to world class
               level.
