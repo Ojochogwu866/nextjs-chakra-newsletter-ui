@@ -1,7 +1,8 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
-
+The essence of this Repo is to give beginners a background and foundational knowledge on getting Started with Chakra-Ui and NextJs. Getting to understnad how to use Chakra-Ui, Setting up, Configurations and installations and Building your first app using Chakra-Ui and Nextjs.
+To get started;
 First, run the development server:
 
 ```bash
