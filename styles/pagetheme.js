@@ -1,11 +1,10 @@
 import { extendTheme } from "@chakra-ui/react";
 import { theme as chakraTheme } from "@chakra-ui/react";
-
+import { mode } from "@chakra-ui/theme-tools";
 const fonts = {
   ...chakraTheme.fonts,
-  body: "https://fonts.cdnfonts.com/css/work-sans?styles=18610,18612,18607,18608,18609,18611,18605,18606,18604",
-  heading:
-    "https://fonts.cdnfonts.com/css/work-sans?styles=18610,18612,18607,18608,18609,18611,18605,18606,18604",
+  body: `Inter,-apple-system,BlindMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji`,
+  heading: `Inter,-apple-system,BlindMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji`,
 };
 
 const breakPoints = {
@@ -14,10 +13,19 @@ const breakPoints = {
   lg: "64em",
   xl: "62em",
 };
+const styles = {
+  global: (props) => ({
+    body: {
+      color: mode("gray.800", "whiteAlpha.900")(props),
+      bg: mode()(props),
+    },
+  }),
+};
 
 const overrides = {
   ...chakraTheme,
   fonts,
+  styles,
   breakPoints,
   fontWeights: {
     normal: 300,
@@ -34,7 +42,7 @@ const overrides = {
     "3xl": "28px",
     "4xl": "36px",
     "5xl": "40px",
-    "6xl": "48",
+    "6xl": "48px",
     "7xl": "64px",
   },
 };
