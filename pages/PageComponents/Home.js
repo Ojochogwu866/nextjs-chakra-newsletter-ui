@@ -2,6 +2,7 @@ import React from "react";
 import {
   Box,
   Flex,
+  Select,
   Stack,
   Heading,
   Text,
@@ -9,15 +10,14 @@ import {
   Input,
   Button,
   SimpleGrid,
-  Avatar,
-  AvatarGroup,
   useBreakpointValue,
   Icon,
 } from "@chakra-ui/react";
-
+import ModeSwitch from "./Switch";
 export default function JoinOurTeam() {
   return (
     <Box position={"relative"}>
+      <ModeSwitch />
       <Container
         as={SimpleGrid}
         maxW={"7xl"}
@@ -26,16 +26,9 @@ export default function JoinOurTeam() {
         py={{ base: 10, sm: 20, lg: 32 }}
       >
         <Stack spacing={{ base: 10, md: 20 }}>
-          <Heading lineHeight={1.1} fontSize={40}>
-            Level up your Income{" "}
-            <Text
-              as={"span"}
-              bgGradient="linear(to-r, red.400,pink.400)"
-              bgClip="text"
-            >
-              &
-            </Text>{" "}
-            As A Junior-Mid Developer
+          <Heading lineHeight={1.2} size="3xl">
+            Level up your Income <br /> Get the best ideas from my weekly
+            newsletter
           </Heading>
         </Stack>
         <Stack
@@ -61,8 +54,8 @@ export default function JoinOurTeam() {
               </Text>
             </Heading>
             <Text color={"gray.500"} fontSize={{ base: "sm", sm: "md" }}>
-              We’re looking for amazing engineers just like you! Become a part
-              of our rockstar engineering team and skyrocket your career!
+              Join 1000+ developers in recieving weekly newsletters to hlep you
+              make huge extra income as a developer.
             </Text>
           </Stack>
           <Box as={"form"} mt={10}>
@@ -77,7 +70,7 @@ export default function JoinOurTeam() {
                 }}
               />
               <Input
-                placeholder="firstname@lastname.io"
+                placeholder="hello@ojochogwu.xyz"
                 bg={"gray.100"}
                 border={0}
                 color={"gray.500"}
@@ -85,18 +78,23 @@ export default function JoinOurTeam() {
                   color: "gray.500",
                 }}
               />
-              <Input
-                placeholder="+1 (___) __-___-___"
+              <Select
+                placeholder="Select Stack"
                 bg={"gray.100"}
                 border={0}
+                size="sm"
                 color={"gray.500"}
                 _placeholder={{
                   color: "gray.500",
                 }}
-              />
-              <Button fontFamily={"heading"} bg={"gray.200"} color={"gray.800"}>
-                Upload CV
-              </Button>
+              >
+                <option value="frontend">Frontend Developer</option>
+                <option value="backend">Backend Developer</option>
+                <option value="fullstack">FullStack Developer</option>
+                <option value="design">Ui/Ux Designer</option>
+                <option value="datascience">Data Science Engineer</option>
+                <option value="Iot">Internet of Things</option>
+              </Select>
             </Stack>
             <Button
               fontFamily={"heading"}
@@ -115,33 +113,6 @@ export default function JoinOurTeam() {
           form
         </Stack>
       </Container>
-      <Blur
-        position={"absolute"}
-        top={-10}
-        left={-10}
-        style={{ filter: "blur(70px)" }}
-      />
     </Box>
   );
 }
-
-export const Blur = () => {
-  return (
-    <Icon
-      width={useBreakpointValue({ base: "100%", md: "40vw", lg: "30vw" })}
-      zIndex={useBreakpointValue({ base: -1, md: -1, lg: 0 })}
-      height="560px"
-      viewBox="0 0 528 560"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <circle cx="71" cy="61" r="111" fill="#F56565" />
-      <circle cx="244" cy="106" r="139" fill="#ED64A6" />
-      <circle cy="291" r="139" fill="#ED64A6" />
-      <circle cx="80.5" cy="189.5" r="101.5" fill="#ED8936" />
-      <circle cx="196.5" cy="317.5" r="101.5" fill="#ECC94B" />
-      <circle cx="70.5" cy="458.5" r="101.5" fill="#48BB78" />
-      <circle cx="426.5" cy="-0.5" r="101.5" fill="#4299E1" />
-    </Icon>
-  );
-};
