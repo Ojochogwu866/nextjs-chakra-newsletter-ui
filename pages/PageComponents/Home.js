@@ -17,7 +17,6 @@ import ModeSwitch from "./Switch";
 export default function JoinOurTeam() {
   return (
     <Box position={"relative"}>
-      <ModeSwitch />
       <Container
         as={SimpleGrid}
         maxW={"7xl"}
