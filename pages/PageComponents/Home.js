@@ -16,7 +16,12 @@ import {
 import ModeSwitch from "./Switch";
 export default function JoinOurTeam() {
   return (
-    <Box position={"relative"}>
+    <Box
+      position={"relative"}
+      backgroundImage="https://images.unsplash.com/photo-1518655048521-f130df041f66?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8d2Vic2l0ZSUyMGJhY2tncm91bmR8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60"
+      backgroundPosition="center"
+      backgroundSize="cover"
+    >
       <Container
         as={SimpleGrid}
         maxW={"7xl"}
